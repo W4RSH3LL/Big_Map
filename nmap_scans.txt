@@ -1,0 +1,10 @@
+nmap -Pn -T4 -p 1-1000
+nmap -sS -Pn -T4 --max-retries 2 -p- -v
+nmap -sV -Pn -T4 -p 80,443,22,21
+nmap -O --osscan-guess -Pn -T4
+nmap -A -Pn -T4 -p 1-1000
+nmap -sU -Pn -T4 -p 53,67,123
+nmap -p 80,443 -sV --script banner
+nmap -sV -p 21,22,25,80,443 --script banner
+nmap -sS -Pn -T2 -f --mtu 24 -p 1-1000
+nmap -sS -sU -sV -O -Pn -T4 -p- -v
